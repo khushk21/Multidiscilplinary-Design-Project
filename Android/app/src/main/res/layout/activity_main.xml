@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="600dp"
+            android:layout_height="520dp">
+
+            <TextView
+                android:id="@+id/tvRobotPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Robot Position:"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/arenaBound"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.063"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.006" />
+
+            <TextView
+                android:id="@+id/txtRobotPosition"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvRobotPosition"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.006" />
+
+            <TextView
+                android:id="@+id/txtRobotDirection"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FF5722"
+                android:layout_marginBottom="495dp"
+                android:layout_marginRight="210dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvRobotDirection"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRobotDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Robot Direction:"
+                android:textColor="#000000"
+                android:layout_marginBottom="485dp"
+                android:layout_marginRight="380dp"
+                app:layout_constraintBottom_toBottomOf="@+id/arenaBound"
+                app:layout_constraintEnd_toEndOf="@+id/arenaBound"
+                app:layout_constraintStart_toEndOf="@+id/txtRobotPosition"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvXPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X Position: "
+                android:layout_marginLeft="335dp"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/arenaBound"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.063"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.006" />
+
+            <TextView
+                android:id="@+id/txtXPosition"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="288dp"
+                android:textColor="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvRobotPosition"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.006" />
+
+            <TextView
+                android:id="@+id/txtYPosition"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FF5722"
+                android:layout_marginLeft="408dp"
+                android:layout_marginBottom="495dp"
+                android:layout_marginRight="120dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvRobotDirection"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvYPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y Position: "
+                android:textColor="#000000"
+                android:layout_marginBottom="485dp"
+                android:layout_marginRight="250dp"
+                android:layout_marginLeft="400dp"
+                app:layout_constraintBottom_toBottomOf="@+id/arenaBound"
+                app:layout_constraintEnd_toEndOf="@+id/arenaBound"
+                app:layout_constraintStart_toEndOf="@+id/txtRobotPosition"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:id="@+id/arenaBound"
+                android:layout_width="600dp"
+                android:layout_height="497dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <view
+                    android:id="@+id/mapView"
+                    class="com.example.mdpgroup17.Arena.ArenaMap"
+                    android:layout_width="600dp"
+                    android:layout_height="497dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="70dp"-->
+<!--                    android:layout_height="400dp"-->
+<!--                    android:layout_marginRight="20dp">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/ob1"-->
+<!--                        android:layout_width="25dp"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        app:srcCompat="@drawable/obstacle"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="1"-->
+<!--                        android:textAlignment="center"-->
+<!--                        tools:layout_editor_absoluteX="23dp"-->
+<!--                        tools:layout_editor_absoluteY="26dp"-->
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:backgroundTint="#31AECB"
+                app:tabGravity="fill" />
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

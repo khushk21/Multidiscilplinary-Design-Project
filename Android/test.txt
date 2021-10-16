@@ -1,0 +1,2 @@
+                int xMiddle = (((x + 1) * cellSize - (cellSize / 40))-(x * cellSize + (cellSize / 30)))/2;
+                int yMiddle = (((y + 1) * cellSize - (cellSize / 60), unexploredPaint))-(y * cellSize + (cellSize / 30)))/2;

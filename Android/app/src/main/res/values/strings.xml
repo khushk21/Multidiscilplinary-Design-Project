@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MDP Group 17</string>
+
+    <string name="tab_text_1">Map Settings</string>
+    <string name="tab_text_2">Map Controls</string>
+    <string name="tab_text_3">Communication</string>
+
+    <!--  Comms  -->
+    <string name="send">SEND</string>
+</resources>
